@@ -8,7 +8,7 @@ const page = await browser.newPage();
 
 await page.goto('https://mern-expense-tracker.netlify.app/');
 
-await page.waitFor(3 * 1000);
+await page.waitForSelector('#root > div > div > div > div.income > p')
 
 let data = await page.$('#root > div > div > div > div.income > p');
 
